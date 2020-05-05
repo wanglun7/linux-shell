@@ -1,2 +1,2 @@
 # linux-shell
-随便写写shell
+记录一下bash shell的语法
