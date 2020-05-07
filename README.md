@@ -220,11 +220,11 @@ $1取第一个数据
 . name或者source name，就可以调用此脚本的变量或者函数
 
 ## git
-* ssh-key配置
-    $ git config --global user.name "Lun"
-    $ git config --global user.email "659366659@qq.com"
-    $ ssh-keygen -t rsa -C "659366659@qq.com"
-    $ cat ~/.ssh/id_rsa.pub
+**ssh-key配置**
+$ git config --global user.name "Lun"
+$ git config --global user.email "659366659@qq.com"
+$ ssh-keygen -t rsa -C "659366659@qq.com"
+$ cat ~/.ssh/id_rsa.pub
 
 测试连接：ssh -T git@github.com
 查看git配置：git config -l
