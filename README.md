@@ -1,27 +1,27 @@
 # linux,shell,git
 
 ## linux命令相关
-* nohup ./auto_run_stress.sh &
-可以实现ssh连接后，输入命令执行，在ssh断开后，进程依然在后台运行
-**查看输出**
-输出默认保存在nohup.out 中，也可以自定义重定向 nohup command > myout.file 2>&1 & 
-**查看任务**：jobs
+* nohup ./auto_run_stress.sh &  
+可以实现ssh连接后，输入命令执行，在ssh断开后，进程依然在后台运行  
+**查看输出**  
+输出默认保存在nohup.out 中，也可以自定义重定向 nohup command > myout.file 2>&1 &   
+**查看任务**：jobs   
 * 查看进程：ps 
   *  如果想查看进程的CPU占用率和内存占用率，可以使用aux
-  *  如果想查看进程的父进程ID和完整的COMMAND命令，可以使用-ef 
+  *  如果想查看进程的父进程ID和完整的COMMAND命令，可以使用-ef   
 * 查找文件  find . –name “ ” 通配符*
 * 查看文件大小 du –sh 文件名 
 * 显示当前路径：pwd
 * 复制文件夹：cp –r
-* dirname该命令可以取给定路径的目录部分
-  basename命令：去掉目录和文件的后缀，只取文件名
+* dirname该命令可以取给定路径的目录部分  
+ basename命令：去掉目录和文件的后缀，只取文件名  
 * tail -f：循环读取持续更新的文件内容，watch
-* tmux： tmux attach || tmux 相当于nohup的窗口化
-	Ctrl+b切命令模式
-	c创建新窗口
-	&关闭窗口
-	数字键：切到指定窗口
-	切换上一个p，下一个n
+* tmux： tmux attach || tmux 相当于nohup的窗口化  
+	* Ctrl+b切命令模式  
+	* c创建新窗口  
+	* &关闭窗口  
+	* 数字键：切到指定窗口  
+	* 切换上一个p，下一个n  
 
 ## vim相关
 配置显示行数/etc/vim/vimrc    加一行set number
@@ -220,11 +220,11 @@ $1取第一个数据
 . name或者source name，就可以调用此脚本的变量或者函数
 
 ## git
-**ssh-key配置**
-$ git config --global user.name "Lun"
-$ git config --global user.email "659366659@qq.com"
-$ ssh-keygen -t rsa -C "659366659@qq.com"
-$ cat ~/.ssh/id_rsa.pub
+**ssh-key配置**  
+$ git config --global user.name "Lun"  
+$ git config --global user.email "659366659@qq.com"  
+$ ssh-keygen -t rsa -C "659366659@qq.com"  
+$ cat ~/.ssh/id_rsa.pub  
 
 测试连接：ssh -T git@github.com
 查看git配置：git config -l
