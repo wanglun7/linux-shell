@@ -58,7 +58,7 @@ ${file##*/}最大匹配，*/匹配到/dir1/dir2/dir3/，最后去掉左边得到
 	如将所有dir替换为path：${file//dir/path} 	
 参数：file，（/：第一个替换，//：全部替换），dir，/，path
 
-**Eval 二次扫描，可用于变量嵌套 **
+**Eval 二次扫描，可用于变量嵌套**
 原理：先取变量的值，作为变量名，然后获取嵌套变量的值
 * 赋值：eval temp="$""${int}"  
 * 输出变量值：eval echo "$""$int" ，可用于"$""$#"输出最后一个参数的值
@@ -77,7 +77,7 @@ ${file##*/}最大匹配，*/匹配到/dir1/dir2/dir3/，最后去掉左边得到
 * 输出数组的所有值：${arr[*]}
 * 获取数组长度：${#arr[*]}
 
-** 注释**
+**注释**
 单行：#
 多行：<<EOF	注释内容	EOF
 
@@ -221,10 +221,10 @@ $1取第一个数据
 
 ## git
 * ssh-key配置
-$ git config --global user.name "Lun"
-$ git config --global user.email "659366659@qq.com"
-$ ssh-keygen -t rsa -C "659366659@qq.com"
-$ cat ~/.ssh/id_rsa.pub
+    $ git config --global user.name "Lun"
+    $ git config --global user.email "659366659@qq.com"
+    $ ssh-keygen -t rsa -C "659366659@qq.com"
+    $ cat ~/.ssh/id_rsa.pub
 
 测试连接：ssh -T git@github.com
 查看git配置：git config -l
@@ -241,15 +241,16 @@ $ cat ~/.ssh/id_rsa.pub
 * git add -A .
 已跟踪修改+删除+新添加
 
-**git commit -m ‘注释’ **
+**git commit -m ‘注释’**
 将缓存区内容添加到本地仓库
+
 * git commit -am ‘message’  相当于加了个-a
 如果没有新增，只有已跟踪文件的修改或者删除操作，用这个可以省略git add操作
 
 **git pull origin master**
 将远程仓库master中的信息同步到本地分支master中
 
-**git push origin master **
+**git push origin master**
 将本地版本库分支master推送到远程服务器
 
 
