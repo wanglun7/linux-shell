@@ -6,7 +6,9 @@
 **查看输出**
 输出默认保存在nohup.out 中，也可以自定义重定向 nohup command > myout.file 2>&1 & 
 **查看任务**：jobs
-* 查看进程：ps -ef
+* 查看进程：ps 
+  *  如果想查看进程的CPU占用率和内存占用率，可以使用aux
+  *  如果想查看进程的父进程ID和完整的COMMAND命令，可以使用-ef 
 * 查找文件  find . –name “ ” 通配符*
 * 查看文件大小 du –sh 文件名 
 * 显示当前路径：pwd
