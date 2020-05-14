@@ -53,3 +53,49 @@ do
 	done
 	echo -e "\n"
 done
+
+
+i=0
+for device in $all_device_list
+do
+         level=$(adb -s $device shell dumpsys battery | grep -E "level")
+         level=$(echo $level | cut -d ":" -f2)
+         if [ $level -lt 30 ]
+         then
+                 i=$[$i+1]
+                  echo "$device battery_level: $level"
+         fi
+  done
+  echo "level<30:" $i
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
