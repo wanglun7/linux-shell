@@ -1,6 +1,7 @@
 # linux,shell,git
 
 ## linux命令相关
+
 * nohup ./auto_run_stress.sh &  
 可以实现ssh连接后，输入命令执行，在ssh断开后，进程依然在后台运行  
     * 查看输出  
@@ -23,6 +24,14 @@
 	* 数字键：切到指定窗口  
 	* 切换上一个p，下一个n  
 * mkdir -p path 如果目录不存在，则创建，使用于多级目录的创建
+* grep -E使用正则表达式，-o只显示匹配到的（默认显示一行）
+	* 场景1：判断某文件是否存在，find之后|grep-E，然后判断结果是否为空
+	* 场景2：判断输出中是否存在某字符，同上
+* sed -n 1p http_temp.txt显示一个文件的第几行
+* sed -i "s;${pro_old};${product_name};g" stress_test_report.html
+	* 字符串替换
+	* 需要注意变量的字符串如果有引号需要转义\"
+	* 默认分隔符可以用/，但是由于变量中存在/，所以可以换用;
 
 ## vim相关
 配置显示行数/etc/vim/vimrc    加一行set number
