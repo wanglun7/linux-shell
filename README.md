@@ -19,10 +19,9 @@
 * tail -f：循环读取持续更新的文件内容，watch
 * tmux： tmux attach || tmux 相当于nohup的窗口化  
 	* Ctrl+b切命令模式  
-	* c创建新窗口  
-	* &关闭窗口  
-	* 数字键：切到指定窗口  
-	* 切换上一个p，下一个n  
+	* d退出session
+	* tmux ls查看所有，tmux a -t n连接，tmux kill-session -t n删除session
+	* c创建新窗口  &关闭窗口  数字键：切到指定窗口  切换上一个p，下一个n  
 	* tmux detach -a适配显示大小
 	* 窗格新建Ctrl+b，%，切换按方向键，关闭x
 * mkdir -p path 如果目录不存在，则创建，使用于多级目录的创建
