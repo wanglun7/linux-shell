@@ -7,16 +7,26 @@
     * 查看输出  
       输出默认保存在nohup.out 中，也可以自定义重定向 nohup command > myout.file 2>&1 &   
     * 查看任务：jobs   
+  
 * 查看进程：ps 
   *  如果想查看进程的CPU占用率和内存占用率，可以使用aux
   *  如果想查看进程的父进程ID和完整的COMMAND命令，可以使用-ef   
+  
 * 查找文件  find . –name “ ” 通配符*
+
 * 查看文件大小 du –sh 文件名 
+
+* 查找大文件find . -type f -size +800M
+
 * 显示当前路径：pwd
+
 * 复制文件夹：cp –r
+
 * dirname该命令可以取给定路径的目录部分  
  basename命令：去掉目录和文件的后缀，只取文件名  
+
 * tail -f：循环读取持续更新的文件内容，watch
+
 * tmux： tmux attach || tmux 相当于nohup的窗口化  
 	* Ctrl+b切命令模式  
 	* c创建新窗口  
@@ -25,15 +35,21 @@
 	* 切换上一个p，下一个n  
 	* tmux detach -a适配显示大小
 	* 窗格新建Ctrl+b，%，切换按方向键，关闭x
+	
 * mkdir -p path 如果目录不存在，则创建，使用于多级目录的创建
+* ls -l详细输出当前路径下文件，默认最新的文件在最上面
+
 * grep -E使用正则表达式，-o只显示匹配到的（默认显示一行）
 	* 场景1：判断某文件是否存在，find之后|grep-E，然后判断结果是否为空
 	* 场景2：判断输出中是否存在某字符，同上
+	
 * sed -n 1p http_temp.txt显示一个文件的第几行
+
 * sed -i "s;${pro_old};${product_name};g" stress_test_report.html
 	* 字符串替换
 	* 需要注意变量的字符串如果有引号需要转义\"
 	* 默认分隔符可以用/，但是由于变量中存在/，所以可以换用;
+	
 * 用linux连接其他主机：ssh mi@10.221.167.187
 
 ## vim相关
@@ -215,7 +231,7 @@ Function sum {
     * -fn取第n列（1，2或者1-2）  
     * -c 1-2 输出每一行的一到2的字符  
 * Awk：awk -F '"' '{print $1"=>"$2}'  
-    * -F “ ”制定分隔符  
+    * -F “ ”制定分隔符  （不指定时默认空格分隔）
     * $1取第一个数据  
 
 **输入输出重定向**  
