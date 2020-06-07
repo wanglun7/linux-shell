@@ -253,7 +253,7 @@ Function sum {
 
 ## git
 **ssh-key配置**  
-$ git config --global user.name "Lun"  
+$ git config --global user.name "wanglun7"  
 $ git config --global user.email "659366659@qq.com"  
 $ ssh-keygen -t rsa -C "659366659@qq.com"  
 $ cat ~/.ssh/id_rsa.pub  
@@ -266,6 +266,7 @@ $ cat ~/.ssh/id_rsa.pub
 
 **git add**  
 将当前目录下修改的所有代码从工作区添加到暂存区 . 代表当前目录
+
 * git add .
 已跟踪修改+新添加，**不包括删除**
 * git add -u .
