@@ -21,3 +21,5 @@ Host lun_mi_linux
 	* 然后设定权限
 		* chmod 700 ~/.ssh/
 		* chmode 600 ~/.ssh/authorized_keys
+
+## 显示git历史插件：Git Graph
