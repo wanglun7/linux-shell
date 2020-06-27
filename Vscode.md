@@ -22,4 +22,14 @@ Host lun_mi_linux
 		* chmod 700 ~/.ssh/
 		* chmode 600 ~/.ssh/authorized_keys
 
-## 显示git历史插件：Git Graph
+### 插件
+
+* Git Graph：显示历史git提交
+
+
+
+## 报错
+
+* vscode Server did not start successfully
+  * 可能是其他ssh进程占用
+  * ps -ax | grep "remote"，然后kill掉，再重新连接
