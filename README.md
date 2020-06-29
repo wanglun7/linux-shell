@@ -285,4 +285,9 @@ $ cat ~/.ssh/id_rsa.pub
 **git push origin master**  
 将本地版本库分支master推送到远程服务器
 
+**git branch -a**  
+查看所有分支
+
+**整合远程变更：**
+ git push -u origin +master 
 
