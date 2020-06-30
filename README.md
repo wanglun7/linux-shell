@@ -278,6 +278,7 @@ $ cat ~/.ssh/id_rsa.pub
 
 * git commit -am ‘message’  相当于加了个-a
 如果没有新增，只有已跟踪文件的修改或者删除操作，用这个可以省略git add操作
+* git commit -s：在提交时显示  signed-off-by 
 
 **git pull origin master**  
 将远程仓库master中的信息同步到本地分支master中
@@ -285,9 +286,10 @@ $ cat ~/.ssh/id_rsa.pub
 **git push origin master**  
 将本地版本库分支master推送到远程服务器
 
-**git branch -a**  
-查看所有分支
+**git branch -a**  查看所有分支(当前分支不加-a)
+
+**git checkout -b dev origin/dev**  切换分支
 
 **整合远程变更：**
- git push -u origin +master 
+ git push -u origin + dev 
 
